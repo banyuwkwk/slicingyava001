@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+}
+
+.bg-gradient-custom {
+  background-image: linear-gradient(to top, #ef4444, #f97316);
+}
+
+/* Contoh styling tambahan */
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+.image-slider {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-slider img {
+  width: 100%;
+  height: auto;
+}
+
+.image-slider button {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.image-slider button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.image-slider .dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.image-slider .dots button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.image-slider .dots button.active {
+  background-color: blue;
+}
+
+/* app/globals.css or styles/globals.css */
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
